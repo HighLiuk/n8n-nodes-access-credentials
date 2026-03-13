@@ -4,7 +4,7 @@ This is an n8n community node that allows you to access and decode credentials d
 
 The **Access Credentials** node reads the credentials you assign to it and outputs them as JSON data, making credential values available to downstream nodes.
 
-![Access Credentials node](assets/screenshot.png)
+![Access Credentials node](https://raw.githubusercontent.com/HighLiuk/n8n-nodes-access-credentials/master/assets/screenshot.png)
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 

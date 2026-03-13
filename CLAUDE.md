@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run dev` — compile in watch mode
 - `npm run lint` / `npm run lintfix` — ESLint su `src/`
 - `npm run format` — Prettier su `src/`
-- Non ci sono test configurati.
+- `npm test` — Jest test suite
 
 ## Architecture
 
@@ -21,6 +21,7 @@ Il trick chiave è il **Proxy su `description.credentials`** nel constructor: fa
 - TypeScript: `src/` → `dist/` (rootDir/outDir in tsconfig)
 - Solo `dist/` viene pubblicato (`"files": ["dist"]`)
 - Entry point n8n: `dist/nodes/AccessCredentials/AccessCredentials.node.js`
+- Publish: `npm publish --access public` (il token npm Automation con bypass 2FA è configurato in `~/.npmrc`)
 
 ## ESLint
 
