@@ -6,3 +6,4 @@ dist/
 !gulpfile.js
 !.eslintrc.js
 !.prettierrc.js
+!jest.config.js
