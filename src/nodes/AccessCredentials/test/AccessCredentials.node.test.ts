@@ -52,6 +52,15 @@ describe('AccessCredentials Node', () => {
 			expect(node.description.credentials!.length).toBe(0);
 			expect(Array.isArray(node.description.credentials)).toBe(true);
 		});
+
+		it('should include "has:properties" in credentialTypes to support simple credential types (FTP, MySQL, etc.)', () => {
+			const param = node.description.properties.find(
+				(p) => p.name === 'nodeCredentialType',
+			);
+			expect(param).toBeDefined();
+			const credentialTypes = (param as any).credentialTypes as string[];
+			expect(credentialTypes).toContain('has:properties');
+		});
 	});
 
 	describe('execute', () => {

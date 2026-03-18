@@ -35,6 +35,7 @@ export class AccessCredentials implements INodeType {
 					'extends:oAuth1Api',
 					'has:authenticate',
 					'has:genericAuth',
+					'has:properties' as 'has:authenticate',
 				],
 				description: 'The credential type to access and decode',
 			},
